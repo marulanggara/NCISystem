@@ -19,6 +19,13 @@ NCI System is simple web application for recruitment the crews of ship. there ar
 - Admin profile page.
 - Logout function.
 
+## How To Run
+- Clone this repository.
+- Open file using Visual Studio Code.
+- Install packages first using command composer require laravel/ui.
+- Configure .env to config your database.
+- Run php artisan migrate to create database.
+- Run command php artisan serve and npm run dev.
 
 ## Learning Laravel
 
