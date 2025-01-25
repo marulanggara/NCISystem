@@ -5,6 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+use App\Models\Experience;
+
 class Crew extends Model
 {
     use HasFactory;
@@ -14,6 +16,7 @@ class Crew extends Model
         'name',
         'profile_picture',
         'position',
+        'office',
         'seamanbook_file_path',
         'passport_file_path',
         'medical_file_path',

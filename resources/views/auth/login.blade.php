@@ -1,73 +1,82 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="en">
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NCI System | Login</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <style>
+    /* Mengubah Warna Background Input Menjadi Abu-abu Ketika Kolom Input Kosong 
+    Dan Mengubahnya Menjadi Putih Ketika Kolom Input Terisi */ 
+    .form-control {
+      background-color: rgb(211, 211, 211);
+      color: white;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
+    .form-control:focus,
+    .form-control:not(:placeholder-shown) {
+      background-color: white;
+      color: black;
+    }
 
-                        <div class="row mb-3">
-                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
+    ::placeholder {
+      text-align: center;
+    }
+    /* End */
+  </style>
+</head>
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+<body>
+  <!-- Isi Halaman -->
+  <div class="container-fluid bg-light d-flex justify-content-center align-items-center"
+    style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('{{ asset('images/boat.jpg') }}'); background-repeat: no-repeat; background-size: cover; height: 100vh;"> <!-- Pengaturan Background Page Login -->
 
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
-                                </button>
-
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
+    <!-- Card Untuk Menempatkan Form Login -->
+    <div class="card border-0 w-25">
+      <div class="card-body container-fluid p-0">
+        <!-- Nama System -->
+        <div class="card border-0 bg-primary py-5">
+          <h3 class="text-center text-light">NCI System</h3>
         </div>
+        <!-- End -->
+
+        <!-- Form Login -->
+        <form action="{{route('login.process') }}" method="POST">
+          @csrf
+          <div class="d-flex flex-column justify-content-center align-items-center" style="padding-top: 15%; padding-bottom: 2%;">
+            <div class="mb-3">
+              <input type="email" name="email" class="form-control" id="email" placeholder="Email" required>
+            </div>
+            <div class="mb-3">
+              <input type="password" name="password" class="form-control" id="password" placeholder="Password" required>
+            </div>
+          </div>
+          <div class="d-flex justify-content-center" style="padding-bottom: 7.5%;">
+            <button type="submit" id="login-button" class="btn btn-primary rounded-5" style="width: 40%;">Login</button>
+          </div>
+        </form>
+        <!-- End -->
+      </div>
     </div>
-</div>
-@endsection
+  </div>
+  <!-- End -->
+
+  <script>
+    //Mekanisme Submit Form Menggunakan Key "Enter" Selain Melalui Klik Tombol Login 
+    document.getElementById('login-form').addEventListener('keydown', function (event) {
+      if (event.key === 'Enter') {
+        event.preventDefault();
+        document.getElementById('login-button').click();
+      }
+    });
+    //End
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+
+</html>
