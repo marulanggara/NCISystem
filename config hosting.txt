@@ -1,0 +1,3 @@
+database : reky9662_ncisystem
+username : reky9662_adminncis
+password : 2f-USWOSg@+,

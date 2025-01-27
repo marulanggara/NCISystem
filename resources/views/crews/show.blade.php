@@ -110,7 +110,10 @@
 
                                     <!-- Avatar -->
                                     <div class="position-relative container-fluid">
-                                        <img class="rounded-circle position-absolute mx-auto d-block" style="z-index: 10; top: -15vh; left: 28%; height: 240px; width: 240px;" alt="avatar1" src="{{ $crew->profile_picture ? asset('storage/' . $crew->profile_picture) : 'data:image/png;base64,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' }}" />
+                                        <img id="profileImage" class="rounded-circle position-absolute mx-auto d-block" 
+                                            style="z-index: 10; top: -15vh; left: 28%; height: 240px; width: 240px;" 
+                                            alt="avatar1" 
+                                            src="{{ $crew->profile_picture ? asset('storage/' . $crew->profile_picture) : 'data:image/png;base64,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' }}" />
                                     </div>
                                     <!-- End Avatar-->
 
@@ -131,7 +134,7 @@
                                 </div>
                                 
                                 <!-- Form -->
-                                <form id="EditForm" action="{{ route('crews.update', $crew->id) }}" method="POST">
+                                <form id="EditForm" action="{{ route('crews.update', $crew->id) }}" method="POST" enctype="multipart/form-data">
                                     @csrf
                                     @method('PUT')
                                     
@@ -167,13 +170,6 @@
                                             <input type="text" class="form-control" id="phone" name="phone" placeholder="" value="{{ $crew->phone }}">
                                             <label for="floatingInput1">Nomor HP</label>
                                         </div>
-                                    </div>
-                                    <!-- End Form Kiri -->
-
-                                    <div class="vr"></div>
-
-                                    <!-- Form Kanan -->
-                                    <div class="w-50 ps-3 pe-1 overflow-y-auto" style="height: 48vh;">
                                         <div class="form-floating mb-3 container-fluid px-0">
                                             <textarea class="form-control" placeholder="" id="address" name="address"> {{ $crew->address }} </textarea>
                                             <label for="floatingTextarea">Alamat</label>
@@ -182,26 +178,35 @@
                                             <input type="text" class="form-control" id="next_of_kind" name="next_of_kind" placeholder="" value="{{ $crew->next_of_kind }}">
                                             <label for="floatingInput1">Kontak Keluarga</label>
                                         </div>  
-
+    
                                         <div class="form-floating mb-3 container-fluid px-0">
                                             @foreach($crew->experiences as $experience)
                                                     <input type="text" class="form-control mb-2" name="experience_name[]" value="{{ $experience->experience_name }}">
                                                     <input type="hidden" name="experience_id[]" value="{{ $experience->id }}">
                                                     <label for="experience_name">Pengalaman</label>
                                             @endforeach
-
+    
                                             <!-- Input untuk pengalaman baru -->
                                             @if($crew->experiences->count() < 3)
                                                 <input type="text" class="form-control" id="experience_name" name="experience_name[]" placeholder="Pengalaman Baru" style="display: block;">
                                             @endif
                                         </div>
+                                    </div>
+                                    <!-- End Form Kiri -->
+
+                                    <div class="vr"></div>
+
+                                    <!-- Form Kanan -->
+                                    <div class="w-50 ps-3 pe-1 overflow-y-auto" style="height: 48vh;">
+
+                                        {{-- Field Seamanbook --}}
                                         <div class="d-flex justify-content-between align-items-end mb-2">
                                             <div>
-                                                <label for="seamanbook_file_path" class="mb-1">Seaman Book</label>
+                                                <label for="seamanbook_file_path" class="mb-1"><b>Seaman Book</b></label>
                                                 @if($crew->seamanbook_file_path)
-                                                    <input class="form-control" type="text" id="seamanbook_file_path" value="{{ basename($crew->seamanbook_file_path) }}" readonly>
+                                                    <input class="form-control" type="text" id="seamanbook_display" value="{{ basename($crew->seamanbook_file_path) }}" readOnly>
                                                 @else
-                                                    <input class="form-control" type="text" id="seamanbook_file_path" value="No Uploaded File" readonly>
+                                                    <input class="form-control" type="text" id="seamanbook_display" value="No Uploaded File" readOnly>
                                                 @endif
                                             </div>
                                             
@@ -213,14 +218,20 @@
                                                 </div>
                                             @endif
                                         </div>
+                                        <!-- Input File untuk Seamanbook jika edit aktif -->
+                                        <div id="seamanbook_input" style="display: none;">
+                                            <label for="seamanbook_file_path" class="mb-1">Unggah Seamanbook</label>
+                                            <input class="form-control" type="file" id="seamanbook_file_path" name="seamanbook_file_path" accept="pdf/*" multiple>
+                                        </div>
 
+                                        {{-- Field Passport --}}
                                         <div class="d-flex justify-content-between align-items-end mb-2">
                                             <div>
-                                                <label for="passport_file_path" class="mb-1">Passport</label>
+                                                <label for="passport_file_path" class="mb-1"><b>Passport</b></label>
                                                 @if($crew->passport_file_path)
-                                                    <input class="form-control" type="text" id="passport_file_path" value="{{ basename($crew->passport_file_path) }}" readonly>
+                                                    <input class="form-control" type="text" id="passport_display" value="{{ basename($crew->passport_file_path) }}" readOnly>
                                                 @else
-                                                    <input class="form-control" type="text" id="passport_file_path" value="No Uploaded File" readonly>
+                                                    <input class="form-control" type="text" id="passport_display" value="No Uploaded File" readOnly>
                                                 @endif
                                             </div>
                                             @if($crew->passport_file_path)
@@ -231,13 +242,20 @@
                                                 </div>
                                             @endif
                                         </div>
+                                        <!-- Input File untuk Passport jika edit aktif -->
+                                        <div id="passport_input" style="display: none;">
+                                            <label for="passport_file_path" class="mb-1">Unggah Passport</label>
+                                            <input class="form-control" type="file" id="passport_file_path" name="passport_file_path" accept="pdf/*" multiple>
+                                        </div>
+
+                                        {{-- Field Medical --}}
                                         <div class="d-flex justify-content-between align-items-end mb-2">
                                             <div>
-                                                <label for="medical_file_path" class="mb-1">Medical</label>
+                                                <label for="medical_file_path" class="mb-1"><b>Medical</b></label>
                                                 @if($crew->medical_file_path)
-                                                    <input class="form-control" type="text" id="medical_file_path" value="{{ basename($crew->medical_file_path) }}" readonly>
+                                                    <input class="form-control" type="text" id="medical_display" value="{{ basename($crew->medical_file_path) }}" readOnly>
                                                 @else
-                                                    <input class="form-control" type="text" id="medical_file_path" value="No Uploaded File" readonly>
+                                                    <input class="form-control" type="text" id="medical_display" value="No Uploaded File" readOnly>
                                                 @endif
                                             </div>
                                             @if($crew->medical_file_path)
@@ -248,13 +266,20 @@
                                                 </div>
                                             @endif
                                         </div>
+                                        {{-- Input File untuk Medical jika edit --}}
+                                        <div id="medical_input" style="display: none;">
+                                            <label for="medical_file_path" class="mb-1">Unggah Medical </label>
+                                            <input class="form-control" type="file" id="medical_file_path" name="medical_file_path" accept="pdf/*" multiple>
+                                        </div>
+
+                                        {{-- Field Certificate --}}
                                         <div class="d-flex justify-content-between align-items-end mb-2">
                                             <div>
-                                                <label for="certificate_file_path" class="mb-1">Certificate</label>
+                                                <label for="certificate_file_path" class="mb-1"><b>Certificate</b></label>
                                                 @if($crew->certificate_file_path)
-                                                    <input class="form-control" type="text" id="certificate_file_path" value="{{ basename($crew->certificate_file_path) }}" readonly>
+                                                    <input class="form-control" type="text" id="certificate_display" value="{{ basename($crew->certificate_file_path) }}" readOnly>
                                                 @else
-                                                    <input class="form-control" type="text" id="certificate_file_path" value="No Uploaded File" readonly>
+                                                    <input class="form-control" type="text" id="certificate_display" value="No Uploaded File" readOnly>
                                                 @endif
                                             </div>
                                             @if($crew->certificate_file_path)
@@ -264,6 +289,11 @@
                                                     </a>
                                                 </div>
                                             @endif
+                                        </div>
+                                        {{-- Input File untuk Certificate jika edit --}}
+                                        <div id="certificate_input" style="display: none;">
+                                            <label for="certificate_file_path" class="mb-1">Unggah Certificate</label>
+                                            <input class="form-control" type="file" id="certificate_file_path" name="certificate_file_path" accept="pdf/*" multiple>
                                         </div>
                                     </div>
                                     <!-- End Form Kanan -->
@@ -291,7 +321,13 @@
         const formControls = document.querySelectorAll('.form-control');
         const submitButton = document.getElementById('EditSubmit');
         const inputExperience = document.getElementById('experience_name');
+        const fileInputs = document.querySelectorAll('input[type="file"]');
         const form = document.getElementById('EditForm');
+
+        const seamanbookInput = document.getElementById('seamanbook_input');
+        const passportInput = document.getElementById('passport_input');
+        const medicalInput = document.getElementById('medical_input');
+        const certificateInput = document.getElementById('certificate_input');
     
         function toggleInputs() {
             const enable = toggleInputsCheckbox.checked;
@@ -301,6 +337,11 @@
                 input.disabled = !enable;
             });
 
+            // Enable or disable file inputs
+            fileInputs.forEach(fileInput => {
+                fileInput.disabled = !enable;
+            });
+
             // Show or hide the submit button and experience input
             if (submitButton) {
                 submitButton.style.display = enable ? 'block' : 'none';
@@ -308,6 +349,13 @@
 
             if (inputExperience) {
                 inputExperience.style.display = enable ? 'block' : 'none';
+            }
+
+            if (seamanbookInput && passportInput && medicalInput && certificateInput) {
+                seamanbookInput.style.display = enable ? 'block' : 'none';
+                passportInput.style.display = enable ? 'block' : 'none';
+                medicalInput.style.display = enable ? 'block' : 'none';
+                certificateInput.style.display = enable ? 'block' : 'none';
             }
 
             // Enable the submit button if form is editable
@@ -329,6 +377,7 @@
         // Handle submit button click event
         submitButton.addEventListener('click', function(e) {
             e.preventDefault(); // Prevent default form submission
+
             form.submit(); // Manually submit the form
         });
 
